@@ -9,13 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-outer: #dbeafe;
       --bg-board-top: #eef6ff;
       --bg-board-bottom: #f8fbff;
       --surface: #ffffff;
       --surface-soft: #f2f8ff;
       --border: #cfe2f5;
-      --border-strong: #9cc5eb;
       --ink: #142d4c;
       --ink-secondary: #3b5978;
       --muted: #5e7a99;
@@ -31,13 +29,10 @@
       --pine-teal: #0f766e;
       --pine-soft: #ecfdf5;
       --pine-border: #a7f3d0;
-      --violet-accent: #6d28d9;
-      --violet-soft: #f5f3ff;
 
       --font-head: 'Kanit', -apple-system, BlinkMacSystemFont, 'Thonburi', 'Leelawadee UI', sans-serif;
       --font-body: 'Noto Sans Thai', -apple-system, BlinkMacSystemFont, 'Thonburi', 'Leelawadee UI', sans-serif;
 
-      --radius-lg: 20px;
       --radius-md: 14px;
       --radius-sm: 10px;
       --shadow-board: 0 16px 44px rgba(17, 50, 89, 0.12), 0 2px 8px rgba(17, 50, 89, 0.06);
@@ -57,34 +52,34 @@
         radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.85) 0%, transparent 42%),
         radial-gradient(circle at 85% 12%, rgba(252, 231, 243, 0.65) 0%, transparent 38%),
         linear-gradient(160deg, #d8ecff 0%, #e7f3ff 52%, #dcebfb 100%);
-      padding: clamp(8px, 1.5vw, 24px);
+      padding: clamp(8px, 1.1vw, 18px);
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      line-height: 1.48;
+      line-height: 1.45;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* 16:9 Widescreen Infographic Canvas */
+    /* 16:9 Widescreen Infographic Canvas — Grid rows prevent top banner collapse */
     .infographic-board {
       width: 100%;
       max-width: 1600px;
+      margin: auto;
       background: linear-gradient(180deg, var(--bg-board-top) 0%, var(--bg-board-bottom) 100%);
       border: 2px solid #ffffff;
       outline: 1px solid var(--border);
       border-radius: 24px;
       box-shadow: var(--shadow-board);
-      padding: clamp(14px, 1.35vw, 22px);
-      display: flex;
-      flex-direction: column;
-      gap: clamp(10px, 0.95vw, 15px);
+      padding: clamp(12px, 1vw, 16px);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: clamp(9px, 0.72vw, 12px);
       position: relative;
     }
 
     @media (min-width: 1360px) {
       .infographic-board {
-        aspect-ratio: 16 / 9;
+        min-height: min(900px, calc((100vw - 32px) * 9 / 16));
       }
     }
 
@@ -94,7 +89,7 @@
       background: linear-gradient(108deg, #163a63 0%, #1f568a 48%, #3c6e9e 76%, #7d5c8c 100%);
       color: #ffffff;
       border-radius: var(--radius-md);
-      padding: clamp(12px, 1.1vw, 18px) clamp(14px, 1.4vw, 22px);
+      padding: clamp(13px, 1.05vw, 17px) clamp(14px, 1.3vw, 22px);
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 16px;
@@ -117,7 +112,7 @@
       z-index: 2;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 7px;
     }
 
     .hero-title-row {
@@ -129,7 +124,7 @@
 
     .plan-badge {
       font-family: var(--font-head);
-      font-size: clamp(11px, 0.8vw, 13px);
+      font-size: clamp(11px, 0.78vw, 12.8px);
       font-weight: 600;
       background: #fde047;
       color: #1e293b;
@@ -137,14 +132,15 @@
       border-radius: 999px;
       letter-spacing: 0.01em;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.14);
+      flex-shrink: 0;
     }
 
     .hero-title {
       margin: 0;
       font-family: var(--font-head);
-      font-size: clamp(19px, 1.7vw, 28px);
+      font-size: clamp(18px, 1.55vw, 25px);
       font-weight: 700;
-      line-height: 1.2;
+      line-height: 1.25;
       letter-spacing: -0.01em;
       text-shadow: 0 2px 8px rgba(12, 32, 58, 0.35);
     }
@@ -163,7 +159,7 @@
       border: 1px solid rgba(255, 255, 255, 0.28);
       backdrop-filter: blur(6px);
       color: #f8fafc;
-      font-size: clamp(11px, 0.78vw, 13px);
+      font-size: clamp(11px, 0.76vw, 12.6px);
       font-weight: 500;
       padding: 3px 10px;
       border-radius: 999px;
@@ -172,10 +168,10 @@
     .hero-kpi {
       position: relative;
       z-index: 2;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.97);
       color: var(--ink);
       border-radius: 14px;
-      padding: 10px 16px;
+      padding: 9px 15px;
       text-align: right;
       border: 2px solid #bae6fd;
       box-shadow: 0 6px 16px rgba(10, 28, 52, 0.2);
@@ -186,16 +182,15 @@
       font-size: 11px;
       font-weight: 700;
       color: var(--brand-ice);
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
     }
 
     .hero-kpi-value {
       font-family: var(--font-head);
-      font-size: clamp(22px, 1.85vw, 30px);
+      font-size: clamp(22px, 1.8vw, 29px);
       font-weight: 700;
       color: var(--sunset-pink);
-      line-height: 1.1;
+      line-height: 1.12;
       margin: 2px 0;
     }
 
@@ -213,10 +208,9 @@
 
     /* Main 12-Col Bento Grid */
     .bento-main {
-      flex: 1;
       display: grid;
       grid-template-columns: repeat(12, minmax(0, 1fr));
-      gap: clamp(10px, 0.95vw, 14px);
+      gap: clamp(9px, 0.8vw, 12px);
       align-items: stretch;
     }
 
@@ -224,14 +218,14 @@
       grid-column: span 4;
       display: flex;
       flex-direction: column;
-      gap: clamp(10px, 0.95vw, 14px);
+      gap: clamp(9px, 0.8vw, 12px);
     }
 
     .right-stack {
       grid-column: span 8;
       display: flex;
       flex-direction: column;
-      gap: clamp(10px, 0.95vw, 14px);
+      gap: clamp(9px, 0.8vw, 12px);
     }
 
     .panel {
@@ -239,10 +233,10 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-card);
-      padding: clamp(11px, 0.95vw, 15px);
+      padding: clamp(10px, 0.85vw, 13px);
       display: flex;
       flex-direction: column;
-      gap: 9px;
+      gap: 8px;
     }
 
     .panel-grow {
@@ -256,13 +250,13 @@
       gap: 8px;
       flex-wrap: wrap;
       border-bottom: 1px dashed #d8e8f8;
-      padding-bottom: 6px;
+      padding-bottom: 5px;
     }
 
     .panel-title {
       margin: 0;
       font-family: var(--font-head);
-      font-size: clamp(14px, 1.02vw, 16.5px);
+      font-size: clamp(13.8px, 0.98vw, 16px);
       font-weight: 600;
       color: var(--ink);
       display: flex;
@@ -284,17 +278,17 @@
     .transport-list {
       display: flex;
       flex-direction: column;
-      gap: 7px;
+      gap: 6px;
     }
 
     .transport-box {
       border-radius: var(--radius-sm);
-      padding: 8px 10px;
+      padding: 7px 9px;
       border: 1px solid var(--border);
       background: #f8fbff;
       display: grid;
-      grid-template-columns: 34px 1fr;
-      gap: 9px;
+      grid-template-columns: 32px 1fr;
+      gap: 8px;
       align-items: start;
     }
 
@@ -309,9 +303,9 @@
     }
 
     .t-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 9px;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -336,7 +330,7 @@
       align-items: baseline;
       gap: 6px;
       font-weight: 700;
-      font-size: clamp(11.5px, 0.82vw, 13px);
+      font-size: clamp(11.4px, 0.8vw, 12.8px);
       color: var(--ink);
     }
 
@@ -358,20 +352,21 @@
 
     .t-desc {
       margin: 2px 0 0;
-      font-size: clamp(10.8px, 0.74vw, 12px);
+      font-size: clamp(10.6px, 0.72vw, 11.8px);
       color: var(--ink-secondary);
-      line-height: 1.42;
+      line-height: 1.4;
     }
 
     /* Budget Breakdown */
     .budget-bar {
-      height: 10px;
+      height: 9px;
       width: 100%;
       border-radius: 999px;
       overflow: hidden;
       display: flex;
       background: #e2e8f0;
       gap: 1px;
+      flex-shrink: 0;
     }
 
     .b-seg {
@@ -381,7 +376,7 @@
     .budget-rows {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 4px;
       flex: 1;
       justify-content: space-between;
     }
@@ -391,15 +386,15 @@
       grid-template-columns: auto 1fr auto;
       align-items: center;
       gap: 7px;
-      font-size: clamp(11px, 0.76vw, 12.2px);
+      font-size: clamp(10.8px, 0.75vw, 12px);
       padding: 3px 6px;
       border-radius: 7px;
       background: #f9fcff;
     }
 
     .b-dot {
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       flex-shrink: 0;
     }
@@ -415,7 +410,7 @@
     .b-name small {
       color: var(--muted);
       font-weight: 400;
-      font-size: 10.5px;
+      font-size: 10.3px;
     }
 
     .b-val {
@@ -430,8 +425,8 @@
       background: var(--sunset-soft);
       border: 1px solid var(--sunset-border);
       border-radius: 8px;
-      padding: 5px 9px;
-      font-size: clamp(10.5px, 0.72vw, 11.5px);
+      padding: 5px 8px;
+      font-size: clamp(10.4px, 0.7vw, 11.4px);
       color: #831843;
       font-weight: 500;
     }
@@ -440,17 +435,17 @@
     .days-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 7px;
+      gap: 6px;
     }
 
     .day-card {
       background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 7px 9px;
+      padding: 6px 9px;
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 2.5px;
       position: relative;
       transition: transform 0.15s ease, border-color 0.15s ease;
     }
@@ -479,7 +474,7 @@
 
     .day-num {
       font-family: var(--font-head);
-      font-size: 11px;
+      font-size: 10.8px;
       font-weight: 700;
       background: var(--brand-ice);
       color: #ffffff;
@@ -496,23 +491,23 @@
     }
 
     .day-date {
-      font-size: 10.5px;
+      font-size: 10.3px;
       font-weight: 600;
       color: var(--muted);
     }
 
     .day-route {
       font-family: var(--font-head);
-      font-size: clamp(11.5px, 0.8vw, 12.8px);
+      font-size: clamp(11.4px, 0.78vw, 12.6px);
       font-weight: 600;
       color: var(--ink);
       line-height: 1.25;
     }
 
     .day-detail {
-      font-size: clamp(10.5px, 0.72vw, 11.4px);
+      font-size: clamp(10.3px, 0.7vw, 11.2px);
       color: var(--ink-secondary);
-      line-height: 1.35;
+      line-height: 1.34;
     }
 
     /* 4 Cities Filter Tabs + Grid */
@@ -526,7 +521,7 @@
       font-family: var(--font-body);
       font-size: 11px;
       font-weight: 600;
-      padding: 4px 10px;
+      padding: 3.5px 9px;
       border-radius: 999px;
       border: 1px solid var(--border);
       background: #f4f9ff;
@@ -554,7 +549,7 @@
     .cities-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 9px;
+      gap: 8px;
       flex: 1;
     }
 
@@ -583,11 +578,11 @@
     }
 
     .city-banner {
-      padding: 7px 10px;
+      padding: 6px 8px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 6px;
+      gap: 4px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
@@ -606,26 +601,28 @@
 
     .city-name {
       font-family: var(--font-head);
-      font-size: clamp(12.2px, 0.86vw, 14px);
+      font-size: clamp(11.3px, 0.78vw, 13px);
       font-weight: 700;
-      color: var(--ink);
-    }
-
-    .city-nights {
-      font-size: 10.5px;
-      font-weight: 700;
-      padding: 2px 7px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.88);
       color: var(--ink);
       white-space: nowrap;
     }
 
+    .city-nights {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--ink);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
     .city-body {
-      padding: 8px 10px;
+      padding: 7px 9px;
       display: flex;
       flex-direction: column;
-      gap: 7px;
+      gap: 6px;
       flex: 1;
       justify-content: space-between;
     }
@@ -634,19 +631,19 @@
       background: #f8fbff;
       border: 1px solid #e1effa;
       border-radius: 8px;
-      padding: 6px 8px;
+      padding: 5.5px 7.5px;
     }
 
     .hotel-name {
       font-weight: 700;
-      font-size: clamp(11px, 0.76vw, 12.2px);
+      font-size: clamp(10.8px, 0.74vw, 12px);
       color: var(--brand-ice);
       display: block;
     }
 
     .hotel-rate {
       font-family: var(--font-head);
-      font-size: clamp(11px, 0.76vw, 12.2px);
+      font-size: clamp(10.8px, 0.74vw, 12px);
       font-weight: 600;
       color: var(--sunset-pink);
       margin-top: 1px;
@@ -656,31 +653,31 @@
       font-family: var(--font-body);
       font-weight: 500;
       color: var(--muted);
-      font-size: 10.5px;
+      font-size: 10.2px;
     }
 
     .spot-section {
-      font-size: clamp(10.6px, 0.73vw, 11.6px);
+      font-size: clamp(10.4px, 0.71vw, 11.4px);
       color: var(--ink-secondary);
-      line-height: 1.38;
+      line-height: 1.36;
     }
 
     .sec-label {
       font-weight: 700;
       color: var(--ink);
       display: block;
-      margin-bottom: 2px;
-      font-size: 11px;
+      margin-bottom: 1.5px;
+      font-size: 10.8px;
     }
 
     .food-box {
       background: var(--cabin-soft);
       border: 1px solid var(--cabin-border);
       border-radius: 8px;
-      padding: 6px 8px;
-      font-size: clamp(10.6px, 0.73vw, 11.6px);
+      padding: 5.5px 7.5px;
+      font-size: clamp(10.4px, 0.71vw, 11.4px);
       color: #7c2d12;
-      line-height: 1.38;
+      line-height: 1.36;
     }
 
     .food-box .sec-label {
@@ -731,11 +728,11 @@
       align-items: center;
       justify-content: space-between;
       gap: 8px;
-      padding: 6px 12px;
-      background: rgba(255, 255, 255, 0.78);
+      padding: 5px 12px;
+      background: rgba(255, 255, 255, 0.82);
       border: 1px solid var(--border);
       border-radius: 10px;
-      font-size: clamp(10.5px, 0.73vw, 11.8px);
+      font-size: clamp(10.4px, 0.72vw, 11.6px);
       color: var(--ink-secondary);
     }
 
@@ -882,7 +879,7 @@
           <div class="transport-list">
             <div class="transport-box">
               <div class="t-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
               </div>
               <div>
                 <div class="t-head">
@@ -895,7 +892,7 @@
 
             <div class="transport-box caravan">
               <div class="t-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="20" height="8" rx="2"/><path d="M5 9 7 4h10l2 5"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="20" height="8" rx="2"/><path d="M5 9 7 4h10l2 5"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
               </div>
               <div>
                 <div class="t-head">
@@ -908,7 +905,7 @@
 
             <div class="transport-box minibus">
               <div class="t-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="11" rx="2"/><path d="M2 11h20"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="11" rx="2"/><path d="M2 11h20"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
               </div>
               <div>
                 <div class="t-head">
@@ -1093,7 +1090,7 @@
             <article class="city-card" data-city="altay" tabindex="0" aria-label="อาเล่อไท่ และ ปู้เอ๋อร์จิน">
               <div class="city-banner">
                 <span class="city-name">🏔️ อาเล่อไท่ &amp; ปู้เอ๋อร์จิน</span>
-                <span class="city-nights">3 คืน (คืน 1, 2, 6)</span>
+                <span class="city-nights">3 คืน (1, 2, 6)</span>
               </div>
               <div class="city-body">
                 <div class="hotel-box">
@@ -1143,7 +1140,7 @@
             <article class="city-card" data-city="hemu" tabindex="0" aria-label="หมู่บ้านเหอมู่">
               <div class="city-banner">
                 <span class="city-name">❄️ หมู่บ้านเหอมู่</span>
-                <span class="city-nights">2 คืน (คืน 4–5)</span>
+                <span class="city-nights">2 คืน (4–5)</span>
               </div>
               <div class="city-body">
                 <div class="hotel-box">
@@ -1168,7 +1165,7 @@
             <article class="city-card" data-city="urumqi" tabindex="0" aria-label="เมืองอุรุมชี">
               <div class="city-banner">
                 <span class="city-name">🕌 เมืองอุรุมชี</span>
-                <span class="city-nights">1 คืน (คืน 7 สิ้นปี)</span>
+                <span class="city-nights">1 คืน (สิ้นปี)</span>
               </div>
               <div class="city-body">
                 <div class="hotel-box">
