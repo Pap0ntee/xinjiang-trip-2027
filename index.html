@@ -1,0 +1,1253 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infographic ทริปซินเจียงเหนือ ช่วงปีใหม่ 9 วัน (แผนที่ 2) — กรุ๊ป 14 คน</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-outer: #dbeafe;
+      --bg-board-top: #eef6ff;
+      --bg-board-bottom: #f8fbff;
+      --surface: #ffffff;
+      --surface-soft: #f2f8ff;
+      --border: #cfe2f5;
+      --border-strong: #9cc5eb;
+      --ink: #142d4c;
+      --ink-secondary: #3b5978;
+      --muted: #5e7a99;
+
+      --brand-ice: #1d6fa5;
+      --brand-sky: #3898ec;
+      --sunset-pink: #db2777;
+      --sunset-soft: #fdf2f8;
+      --sunset-border: #fbcfe8;
+      --cabin-amber: #c26a1b;
+      --cabin-soft: #fff8eb;
+      --cabin-border: #fde68a;
+      --pine-teal: #0f766e;
+      --pine-soft: #ecfdf5;
+      --pine-border: #a7f3d0;
+      --violet-accent: #6d28d9;
+      --violet-soft: #f5f3ff;
+
+      --font-head: 'Kanit', -apple-system, BlinkMacSystemFont, 'Thonburi', 'Leelawadee UI', sans-serif;
+      --font-body: 'Noto Sans Thai', -apple-system, BlinkMacSystemFont, 'Thonburi', 'Leelawadee UI', sans-serif;
+
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      --shadow-board: 0 16px 44px rgba(17, 50, 89, 0.12), 0 2px 8px rgba(17, 50, 89, 0.06);
+      --shadow-card: 0 4px 14px rgba(20, 45, 76, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.85) 0%, transparent 42%),
+        radial-gradient(circle at 85% 12%, rgba(252, 231, 243, 0.65) 0%, transparent 38%),
+        linear-gradient(160deg, #d8ecff 0%, #e7f3ff 52%, #dcebfb 100%);
+      padding: clamp(8px, 1.5vw, 24px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.48;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 16:9 Widescreen Infographic Canvas */
+    .infographic-board {
+      width: 100%;
+      max-width: 1600px;
+      background: linear-gradient(180deg, var(--bg-board-top) 0%, var(--bg-board-bottom) 100%);
+      border: 2px solid #ffffff;
+      outline: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow-board);
+      padding: clamp(14px, 1.35vw, 22px);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(10px, 0.95vw, 15px);
+      position: relative;
+    }
+
+    @media (min-width: 1360px) {
+      .infographic-board {
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      position: relative;
+      background: linear-gradient(108deg, #163a63 0%, #1f568a 48%, #3c6e9e 76%, #7d5c8c 100%);
+      color: #ffffff;
+      border-radius: var(--radius-md);
+      padding: clamp(12px, 1.1vw, 18px) clamp(14px, 1.4vw, 22px);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(22, 58, 99, 0.16);
+    }
+
+    .hero-art-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0.92;
+    }
+
+    .hero-left {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .hero-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .plan-badge {
+      font-family: var(--font-head);
+      font-size: clamp(11px, 0.8vw, 13px);
+      font-weight: 600;
+      background: #fde047;
+      color: #1e293b;
+      padding: 3px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.01em;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.14);
+    }
+
+    .hero-title {
+      margin: 0;
+      font-family: var(--font-head);
+      font-size: clamp(19px, 1.7vw, 28px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      text-shadow: 0 2px 8px rgba(12, 32, 58, 0.35);
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .hero-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      backdrop-filter: blur(6px);
+      color: #f8fafc;
+      font-size: clamp(11px, 0.78vw, 13px);
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .hero-kpi {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.96);
+      color: var(--ink);
+      border-radius: 14px;
+      padding: 10px 16px;
+      text-align: right;
+      border: 2px solid #bae6fd;
+      box-shadow: 0 6px 16px rgba(10, 28, 52, 0.2);
+      min-width: 215px;
+    }
+
+    .hero-kpi-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--brand-ice);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-kpi-value {
+      font-family: var(--font-head);
+      font-size: clamp(22px, 1.85vw, 30px);
+      font-weight: 700;
+      color: var(--sunset-pink);
+      line-height: 1.1;
+      margin: 2px 0;
+    }
+
+    .hero-kpi-value span {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-secondary);
+    }
+
+    .hero-kpi-sub {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* Main 12-Col Bento Grid */
+    .bento-main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: clamp(10px, 0.95vw, 14px);
+      align-items: stretch;
+    }
+
+    .left-stack {
+      grid-column: span 4;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(10px, 0.95vw, 14px);
+    }
+
+    .right-stack {
+      grid-column: span 8;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(10px, 0.95vw, 14px);
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-card);
+      padding: clamp(11px, 0.95vw, 15px);
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .panel-grow {
+      flex: 1;
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+      border-bottom: 1px dashed #d8e8f8;
+      padding-bottom: 6px;
+    }
+
+    .panel-title {
+      margin: 0;
+      font-family: var(--font-head);
+      font-size: clamp(14px, 1.02vw, 16.5px);
+      font-weight: 600;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .panel-tag {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--surface-soft);
+      color: var(--brand-ice);
+      border: 1px solid var(--border);
+    }
+
+    /* Flight & Car Transport Cards */
+    .transport-list {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .transport-box {
+      border-radius: var(--radius-sm);
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      background: #f8fbff;
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 9px;
+      align-items: start;
+    }
+
+    .transport-box.caravan {
+      background: #fffaf2;
+      border-color: #fde1b6;
+    }
+
+    .transport-box.minibus {
+      background: #f2fdf9;
+      border-color: #bcefd8;
+    }
+
+    .t-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e0f0ff;
+      color: var(--brand-ice);
+      flex-shrink: 0;
+    }
+
+    .transport-box.caravan .t-icon {
+      background: #ffedd5;
+      color: var(--cabin-amber);
+    }
+
+    .transport-box.minibus .t-icon {
+      background: #d1fae5;
+      color: var(--pine-teal);
+    }
+
+    .t-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 6px;
+      font-weight: 700;
+      font-size: clamp(11.5px, 0.82vw, 13px);
+      color: var(--ink);
+    }
+
+    .t-price {
+      font-family: var(--font-head);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--brand-ice);
+      white-space: nowrap;
+    }
+
+    .transport-box.caravan .t-price {
+      color: var(--cabin-amber);
+    }
+
+    .transport-box.minibus .t-price {
+      color: var(--pine-teal);
+    }
+
+    .t-desc {
+      margin: 2px 0 0;
+      font-size: clamp(10.8px, 0.74vw, 12px);
+      color: var(--ink-secondary);
+      line-height: 1.42;
+    }
+
+    /* Budget Breakdown */
+    .budget-bar {
+      height: 10px;
+      width: 100%;
+      border-radius: 999px;
+      overflow: hidden;
+      display: flex;
+      background: #e2e8f0;
+      gap: 1px;
+    }
+
+    .b-seg {
+      height: 100%;
+    }
+
+    .budget-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .budget-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 7px;
+      font-size: clamp(11px, 0.76vw, 12.2px);
+      padding: 3px 6px;
+      border-radius: 7px;
+      background: #f9fcff;
+    }
+
+    .b-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .b-name {
+      color: var(--ink);
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .b-name small {
+      color: var(--muted);
+      font-weight: 400;
+      font-size: 10.5px;
+    }
+
+    .b-val {
+      font-family: var(--font-head);
+      font-weight: 600;
+      color: var(--ink);
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .budget-tip {
+      background: var(--sunset-soft);
+      border: 1px solid var(--sunset-border);
+      border-radius: 8px;
+      padding: 5px 9px;
+      font-size: clamp(10.5px, 0.72vw, 11.5px);
+      color: #831843;
+      font-weight: 500;
+    }
+
+    /* 9-Day Route Grid */
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 7px;
+    }
+
+    .day-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 7px 9px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      position: relative;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .day-card:hover {
+      border-color: var(--brand-sky);
+      transform: translateY(-1px);
+    }
+
+    .day-card.peak {
+      background: linear-gradient(180deg, #fff9fc 0%, #fef1f7 100%);
+      border-color: #f9a8d4;
+    }
+
+    .day-card.nye {
+      background: linear-gradient(180deg, #fffdf5 0%, #fef7e0 100%);
+      border-color: #fcd34d;
+    }
+
+    .day-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+    }
+
+    .day-num {
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 700;
+      background: var(--brand-ice);
+      color: #ffffff;
+      padding: 1px 7px;
+      border-radius: 999px;
+    }
+
+    .day-card.peak .day-num {
+      background: var(--sunset-pink);
+    }
+
+    .day-card.nye .day-num {
+      background: var(--cabin-amber);
+    }
+
+    .day-date {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .day-route {
+      font-family: var(--font-head);
+      font-size: clamp(11.5px, 0.8vw, 12.8px);
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.25;
+    }
+
+    .day-detail {
+      font-size: clamp(10.5px, 0.72vw, 11.4px);
+      color: var(--ink-secondary);
+      line-height: 1.35;
+    }
+
+    /* 4 Cities Filter Tabs + Grid */
+    .city-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .city-tab {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #f4f9ff;
+      color: var(--ink-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .city-tab:hover {
+      border-color: var(--brand-sky);
+      color: var(--brand-ice);
+    }
+
+    .city-tab:focus-visible {
+      outline: 2px solid var(--brand-sky);
+      outline-offset: 2px;
+    }
+
+    .city-tab.active {
+      background: var(--brand-ice);
+      color: #ffffff;
+      border-color: var(--brand-ice);
+    }
+
+    .cities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 9px;
+      flex: 1;
+    }
+
+    .cities-grid.single-mode {
+      grid-template-columns: 1fr;
+    }
+
+    .city-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .city-card:hover {
+      border-color: var(--brand-sky);
+      box-shadow: 0 4px 12px rgba(29, 111, 165, 0.1);
+    }
+
+    .city-card.hidden {
+      display: none;
+    }
+
+    .city-banner {
+      padding: 7px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .city-card[data-city="altay"] .city-banner {
+      background: linear-gradient(90deg, #e0f2fe, #f0f9ff);
+    }
+    .city-card[data-city="kanas"] .city-banner {
+      background: linear-gradient(90deg, #e0e7ff, #eef2ff);
+    }
+    .city-card[data-city="hemu"] .city-banner {
+      background: linear-gradient(90deg, #fce7f3, #fff1f2);
+    }
+    .city-card[data-city="urumqi"] .city-banner {
+      background: linear-gradient(90deg, #fef3c7, #fffbeb);
+    }
+
+    .city-name {
+      font-family: var(--font-head);
+      font-size: clamp(12.2px, 0.86vw, 14px);
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .city-nights {
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .city-body {
+      padding: 8px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .hotel-box {
+      background: #f8fbff;
+      border: 1px solid #e1effa;
+      border-radius: 8px;
+      padding: 6px 8px;
+    }
+
+    .hotel-name {
+      font-weight: 700;
+      font-size: clamp(11px, 0.76vw, 12.2px);
+      color: var(--brand-ice);
+      display: block;
+    }
+
+    .hotel-rate {
+      font-family: var(--font-head);
+      font-size: clamp(11px, 0.76vw, 12.2px);
+      font-weight: 600;
+      color: var(--sunset-pink);
+      margin-top: 1px;
+    }
+
+    .hotel-rate span {
+      font-family: var(--font-body);
+      font-weight: 500;
+      color: var(--muted);
+      font-size: 10.5px;
+    }
+
+    .spot-section {
+      font-size: clamp(10.6px, 0.73vw, 11.6px);
+      color: var(--ink-secondary);
+      line-height: 1.38;
+    }
+
+    .sec-label {
+      font-weight: 700;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 2px;
+      font-size: 11px;
+    }
+
+    .food-box {
+      background: var(--cabin-soft);
+      border: 1px solid var(--cabin-border);
+      border-radius: 8px;
+      padding: 6px 8px;
+      font-size: clamp(10.6px, 0.73vw, 11.6px);
+      color: #7c2d12;
+      line-height: 1.38;
+    }
+
+    .food-box .sec-label {
+      color: #9a3412;
+    }
+
+    /* Extra insider info visible when single city is selected */
+    .city-extra {
+      display: none;
+      margin-top: 4px;
+      padding: 8px 10px;
+      background: var(--pine-soft);
+      border: 1px solid var(--pine-border);
+      border-radius: 8px;
+      font-size: 12.5px;
+      color: #115e59;
+      line-height: 1.5;
+    }
+
+    .cities-grid.single-mode .city-card {
+      cursor: default;
+    }
+
+    .cities-grid.single-mode .city-body {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      align-items: stretch;
+      padding: 12px;
+    }
+
+    .cities-grid.single-mode .city-extra {
+      display: block;
+      grid-column: 1 / -1;
+    }
+
+    .cities-grid.single-mode .hotel-name,
+    .cities-grid.single-mode .hotel-rate,
+    .cities-grid.single-mode .spot-section,
+    .cities-grid.single-mode .food-box {
+      font-size: 13px;
+    }
+
+    /* Footer bar inside 16:9 board */
+    .board-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 6px 12px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: clamp(10.5px, 0.73vw, 11.8px);
+      color: var(--ink-secondary);
+    }
+
+    .footer-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* Responsive Breakpoints for Tablet & Mobile */
+    @media (max-width: 1199px) {
+      .bento-main {
+        grid-template-columns: 1fr;
+      }
+      .left-stack,
+      .right-stack {
+        grid-column: 1 / -1;
+      }
+      .left-stack {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .cities-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-banner {
+        grid-template-columns: 1fr;
+      }
+      .hero-kpi {
+        text-align: left;
+      }
+      .left-stack {
+        grid-template-columns: 1fr;
+      }
+      .days-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .cities-grid,
+      .cities-grid.single-mode .city-body {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .days-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="infographic-board" aria-label="บอร์ดอินโฟกราฟิกทริปซินเจียงเหนือ ช่วงปีใหม่ 9 วัน แผนที่ 2">
+    <!-- HERO BANNER WITH CUTE WINTER VECTOR ILLUSTRATION -->
+    <header class="hero-banner">
+      <svg class="hero-art-bg" viewBox="0 0 1400 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="snowPeak" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.32"/>
+            <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.05"/>
+          </linearGradient>
+          <linearGradient id="pinkGlow" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f9a8d4" stop-opacity="0.38"/>
+            <stop offset="100%" stop-color="#fde047" stop-opacity="0.08"/>
+          </linearGradient>
+        </defs>
+        <!-- Sunset Glow -->
+        <circle cx="1040" cy="48" r="95" fill="url(#pinkGlow)" />
+        <!-- Cute Snow Mountains -->
+        <path d="M560 160 L690 42 L820 160 Z" fill="url(#snowPeak)" />
+        <path d="M740 160 L895 24 L1050 160 Z" fill="url(#snowPeak)" />
+        <path d="M950 160 L1110 38 L1260 160 Z" fill="url(#snowPeak)" />
+        <!-- Snowy Rolling Hills -->
+        <path d="M500 160 Q760 112 1020 138 T1400 124 L1400 160 Z" fill="rgba(255,255,255,0.14)" />
+        <!-- Frosted Pine Trees -->
+        <g transform="translate(915, 86)" opacity="0.88">
+          <polygon points="18,0 0,32 36,32" fill="#e0f2fe"/>
+          <polygon points="18,16 -4,50 40,50" fill="#bae6fd"/>
+          <rect x="14" y="50" width="8" height="12" fill="#78350f"/>
+        </g>
+        <g transform="translate(1078, 92)" opacity="0.85">
+          <polygon points="15,0 0,26 30,26" fill="#e0f2fe"/>
+          <polygon points="15,13 -3,42 33,42" fill="#bae6fd"/>
+          <rect x="12" y="42" width="6" height="10" fill="#78350f"/>
+        </g>
+        <!-- Cute Hemu Log Cabin with Puffy Snow Mushroom Roof -->
+        <g transform="translate(972, 82)">
+          <!-- Chimney smoke -->
+          <circle cx="62" cy="-6" r="5" fill="rgba(255,255,255,0.45)"/>
+          <circle cx="68" cy="-16" r="7" fill="rgba(255,255,255,0.3)"/>
+          <rect x="56" y="4" width="10" height="18" rx="2" fill="#9a3412"/>
+          <!-- Cabin body -->
+          <rect x="12" y="26" width="64" height="38" rx="4" fill="#b45309"/>
+          <line x1="12" y1="36" x2="76" y2="36" stroke="#78350f" stroke-width="2"/>
+          <line x1="12" y1="46" x2="76" y2="46" stroke="#78350f" stroke-width="2"/>
+          <!-- Glowing Warm Windows -->
+          <rect x="22" y="34" width="16" height="15" rx="3" fill="#fef08a"/>
+          <rect x="48" y="34" width="16" height="15" rx="3" fill="#fef08a"/>
+          <!-- Thick Snow Mushroom Roof -->
+          <path d="M2 30 Q44 -4 86 30 Q90 36 80 36 L8 36 Q-2 36 2 30 Z" fill="#ffffff"/>
+        </g>
+        <!-- Snowflakes -->
+        <circle cx="620" cy="34" r="3" fill="#ffffff" opacity="0.7"/>
+        <circle cx="780" cy="28" r="2.5" fill="#ffffff" opacity="0.6"/>
+        <circle cx="850" cy="64" r="3.5" fill="#ffffff" opacity="0.65"/>
+        <circle cx="1145" cy="30" r="3" fill="#ffffff" opacity="0.7"/>
+        <circle cx="1210" cy="68" r="2.5" fill="#ffffff" opacity="0.55"/>
+      </svg>
+
+      <div class="hero-left">
+        <div class="hero-title-row">
+          <span class="plan-badge">⭐ แผนที่ 2 แนะนำ • Multi-city ไม่ย้อนทาง</span>
+          <h1 class="hero-title">❄️ ทริปซินเจียงเหนือ ฤดูหิมะฟู 9 วัน (อัลไต – คานาสือ – เหอมู่ – อุรุมชี)</h1>
+        </div>
+        <div class="hero-chips">
+          <span class="hero-chip">📅 ส. 25 ธ.ค. 2027 – อา. 2 ม.ค. 2028 (ลา 4 วัน)</span>
+          <span class="hero-chip">👥 กรุ๊ปส่วนตัว 14 คน (เปิด 7 ห้องคู่พอดี)</span>
+          <span class="hero-chip">🌡️ หิมะพีคสุด -20°C ถึง -30°C</span>
+          <span class="hero-chip">🍲 อาหารฮาลาลจานยักษ์ • นั่ง 2 โต๊ะกลม (โต๊ะละ 7 คน)</span>
+        </div>
+      </div>
+
+      <div class="hero-kpi">
+        <div class="hero-kpi-label">งบรวมสุทธิ (อ้างอิงราคาที่พักจริง ÷ 2)</div>
+        <div class="hero-kpi-value">56,200 <span>บาท/คน</span></div>
+        <div class="hero-kpi-sub">เผื่อเรตปีใหม่ ~58,000 บ. • เรต 1¥ ≈ 5.10 บ.</div>
+      </div>
+    </header>
+
+    <!-- MAIN BENTO CONTENT -->
+    <div class="bento-main">
+      <!-- LEFT COLUMN: FLIGHTS/TRANSPORT + BUDGET -->
+      <div class="left-stack">
+        <!-- Panel 1: Flights & Vehicles -->
+        <section class="panel" aria-labelledby="transport-heading">
+          <div class="panel-head">
+            <h2 class="panel-title" id="transport-heading">✈️ แผนตั๋วบิน &amp; สูตรเหมารถ 2 ช่วง</h2>
+            <span class="panel-tag">One-Way สะดวกสุด</span>
+          </div>
+          <div class="transport-list">
+            <div class="transport-box">
+              <div class="t-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+              </div>
+              <div>
+                <div class="t-head">
+                  <span>ตั๋ว Multi-city (3U / CZ)</span>
+                  <span class="t-price">21,000 บ./คน</span>
+                </div>
+                <p class="t-desc">ขาไป <strong>BKK ➔ เฉิงตู/กว่างโจว ➔ Altay (AAT)</strong> (เผื่อต่อเครื่อง ≥3.5–4 ชม.) • ขากลับ <strong>Urumqi (URC) ➔ BKK</strong> รวมโหลด 23 กก.</p>
+              </div>
+            </div>
+
+            <div class="transport-box caravan">
+              <div class="t-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="20" height="8" rx="2"/><path d="M5 9 7 4h10l2 5"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+              </div>
+              <div>
+                <div class="t-head">
+                  <span>ช่วง 1: คาราวาน 4WD ยางหิมะ 4 คัน (7 วัน)</span>
+                  <span class="t-price">17,850 บ./คน</span>
+                </div>
+                <p class="t-desc">Day 1–7 นั่งหลวมๆ <strong>3-3-4-4 คน</strong> รับสนามบิน AAT ลุยคานาสือ–เหอมู่–ถนนอาเหอ–ทางด่วน S21 ส่งจบ รร.อุรุมชี <em>(กฎหิมะห้ามบัส 19 ที่นั่งขึ้นเขา)</em></p>
+              </div>
+            </div>
+
+            <div class="transport-box minibus">
+              <div class="t-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="11" rx="2"/><path d="M2 11h20"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+              </div>
+              <div>
+                <div class="t-head">
+                  <span>ช่วง 2: มินิบัส 19 ที่นั่ง อุรุมชี (1 วัน)</span>
+                  <span class="t-price">765 บ./คน</span>
+                </div>
+                <p class="t-desc">Day 8 เหมาคันเดียวนั่งเฮฮาครบ 14 คน! พาเที่ยวทะเลสาบเทียนฉือ + ช้อปของฝากในเมือง + ส่งสนามบิน URC ขากลับ</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Panel 2: Budget Breakdown -->
+        <section class="panel panel-grow" aria-labelledby="budget-heading">
+          <div class="panel-head">
+            <h2 class="panel-title" id="budget-heading">💰 แจกแจงงบต่อคน (หารจาก 14 คน)</h2>
+            <span class="panel-tag">Private 100%</span>
+          </div>
+
+          <div class="budget-bar" role="img" aria-label="สัดส่วนงบประมาณรวม 56,200 บาทต่อคน">
+            <div class="b-seg" style="width:37.37%; background:#2563eb;" title="ตั๋วเครื่องบิน 21,000 บ."></div>
+            <div class="b-seg" style="width:31.76%; background:#d97706;" title="รถ 4WD 4 คัน 17,850 บ."></div>
+            <div class="b-seg" style="width:11.39%; background:#ec4899;" title="อาหารกองกลาง 6,400 บ."></div>
+            <div class="b-seg" style="width:10.41%; background:#0ea5e9;" title="ที่พัก 7 คืน 5,850 บ."></div>
+            <div class="b-seg" style="width:4.72%; background:#8b5cf6;" title="ตั๋วอุทยานและกระเช้า 2,650 บ."></div>
+            <div class="b-seg" style="width:3.00%; background:#14b8a6;" title="ประกัน eSIM ทิป 1,685 บ."></div>
+            <div class="b-seg" style="width:1.35%; background:#10b981;" title="มินิบัสอุรุมชี 765 บ."></div>
+          </div>
+
+          <div class="budget-rows">
+            <div class="budget-item">
+              <span class="b-dot" style="background:#2563eb;"></span>
+              <span class="b-name">1. ตั๋วบิน Multi-city <small>(BKK➔AAT / URC➔BKK)</small></span>
+              <span class="b-val">21,000 บ.</span>
+            </div>
+            <div class="budget-item">
+              <span class="b-dot" style="background:#d97706;"></span>
+              <span class="b-name">2. รถ 4WD ยางหิมะ 4 คัน <small>(7 วัน ~249,900÷14)</small></span>
+              <span class="b-val">17,850 บ.</span>
+            </div>
+            <div class="budget-item">
+              <span class="b-dot" style="background:#ec4899;"></span>
+              <span class="b-name">3. ค่าอาหารกองกลาง 8 วัน <small>(เฉลี่ย 800 บ./วัน)</small></span>
+              <span class="b-val">6,400 บ.</span>
+            </div>
+            <div class="budget-item">
+              <span class="b-dot" style="background:#0ea5e9;"></span>
+              <span class="b-name">4. ที่พักรวม 7 คืน <small>(รวม 11,700 บ./ห้อง ÷ 2 คน)</small></span>
+              <span class="b-val">5,850 บ.</span>
+            </div>
+            <div class="budget-item">
+              <span class="b-dot" style="background:#8b5cf6;"></span>
+              <span class="b-name">5. ตั๋วควบหน้าหนาวคานาสือ-เหอมู่ &amp; กระเช้าครบจุด</span>
+              <span class="b-val">2,650 บ.</span>
+            </div>
+            <div class="budget-item">
+              <span class="b-dot" style="background:#14b8a6;"></span>
+              <span class="b-name">6. ประกันพายุหิมะ + eSIM 9 วัน + ทิปคนขับ 5 คัน</span>
+              <span class="b-val">1,685 บ.</span>
+            </div>
+            <div class="budget-item">
+              <span class="b-dot" style="background:#10b981;"></span>
+              <span class="b-name">7. มินิบัส 19 ที่นั่ง อุรุมชี <small>(1 วัน ~10,710÷14)</small></span>
+              <span class="b-val">765 บ.</span>
+            </div>
+          </div>
+
+          <div class="budget-tip">
+            💡 <strong>ทริคลดงบ:</strong> หากเช่า MPV 7 ที่นั่ง 4WD ยางหิมะ 3 คันแทน 4 คัน ประหยัดได้อีก ~2,500 บ./คน (เหลือ ~53,700 บ./คน)
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN: 9-DAY TIMELINE + 4 CITIES HOTELS/SPOTS/FOOD -->
+      <div class="right-stack">
+        <!-- Panel 3: 9-Day Route -->
+        <section class="panel" aria-labelledby="itinerary-heading">
+          <div class="panel-head">
+            <h2 class="panel-title" id="itinerary-heading">🗺️ เส้นทางรายวัน 9 วัน (พักบนฝั่ง 7 คืน • บินกลับคืนวันที่ 8)</h2>
+            <span class="panel-tag">แสงสว่างหน้าหนาว ~10:00–18:00 น.</span>
+          </div>
+
+          <div class="days-grid">
+            <article class="day-card">
+              <div class="day-top">
+                <span class="day-num">Day 1</span>
+                <span class="day-date">ส. 25 ธ.ค. 27</span>
+              </div>
+              <div class="day-route">สุวรรณภูมิ ✈️ อาเล่อไท่ (AAT)</div>
+              <div class="day-detail">แวะต่อเครื่องเข้า AAT ถึงบ่าย ทีมรถ 4WD 4 คันรับเข้าเมือง ทานหม้อไฟ พักโบลเดน (คืน 1)</div>
+            </article>
+
+            <article class="day-card">
+              <div class="day-top">
+                <span class="day-num">Day 2</span>
+                <span class="day-date">อา. 26 ธ.ค. 27</span>
+              </div>
+              <div class="day-route">เมืองอัลไต &amp; ลานสกีเจียงจวินซาน</div>
+              <div class="day-detail">เดินชิลล์ริมแม่น้ำ บ่ายขึ้นกระเช้าชมวิวภูเขาหิมะ &amp; ปาร์ตี้แสงเย็นสีชมพู พักโบลเดน (คืน 2)</div>
+            </article>
+
+            <article class="day-card">
+              <div class="day-top">
+                <span class="day-num">Day 3</span>
+                <span class="day-date">จ. 27 ธ.ค. 27</span>
+              </div>
+              <div class="day-route">อัลไต 🚗 ปู้เอ๋อร์จิน 🚗 คานาสือ</div>
+              <div class="day-detail">ฝากกระเป๋าใหญ่ที่ รร. แวะปู้เอ๋อร์จินทานปลาแม่น้ำน้ำเย็น ชมทะเลสาบน้ำแข็ง พัก NANXI (คืน 3)</div>
+            </article>
+
+            <article class="day-card">
+              <div class="day-top">
+                <span class="day-num">Day 4</span>
+                <span class="day-date">อ. 28 ธ.ค. 27</span>
+              </div>
+              <div class="day-route">3 อ่าวคานาสือ 🚗 หมู่บ้านเหอมู่</div>
+              <div class="day-detail">ชมหมอกเช้า &amp; น้ำค้างแข็ง 3 อ่าวสวรรค์ บ่ายเข้าเหอมู่ ถ่ายรูปไฟบ้านไม้ Blue Hour พัก Batai (คืน 4)</div>
+            </article>
+
+            <article class="day-card peak">
+              <div class="day-top">
+                <span class="day-num">Day 5 ★ พีคสุด</span>
+                <span class="day-date">พ. 29 ธ.ค. 27</span>
+              </div>
+              <div class="day-route">เหอมู่เต็มวัน &amp; ยอดเขาหยุนเซียว</div>
+              <div class="day-detail">เช้าจุดชมวิวฮาเติงดูเห็ดหิมะ &amp; สะพานไม้ สาดน้ำร้อนเป็นไอหิมะ กระเช้าจี๋เค่อผู่หลิน พัก Batai (คืน 5)</div>
+            </article>
+
+            <article class="day-card">
+              <div class="day-top">
+                <span class="day-num">Day 6</span>
+                <span class="day-date">พฤ. 30 ธ.ค. 27</span>
+              </div>
+              <div class="day-route">เหอมู่ 🚗 ถนนสายหิมะอาเหอ ➔ อัลไต</div>
+              <div class="day-detail">วิ่ง Ahe Highway (10:00–14:00 น.) ลัดเลาะภูเขาหิมะสุดอลังการ ลงมาพักโบลเดน อัลไต (คืน 6)</div>
+            </article>
+
+            <article class="day-card nye">
+              <div class="day-top">
+                <span class="day-num">Day 7 🎉 สิ้นปี</span>
+                <span class="day-date">ศ. 31 ธ.ค. 27</span>
+              </div>
+              <div class="day-route">ทางด่วนทะเลทราย S21 ➔ อุรุมชี</div>
+              <div class="day-detail">ข้ามทะเลทรายหิมะ 343 กม. (4–5 ชม. จบ 4WD) ฉลองเคานต์ดาวน์แกรนด์บาซาร์ พักบอร์แมน (คืน 7)</div>
+            </article>
+
+            <article class="day-card">
+              <div class="day-top">
+                <span class="day-num">Day 8</span>
+                <span class="day-date">ส. 1 ม.ค. 28</span>
+              </div>
+              <div class="day-route">ทะเลสาบเทียนฉือ ✈️ บินกลับไทย</div>
+              <div class="day-detail">นั่งมินิบัส 19 ที่นั่งครบแก๊ง! เที่ยวเทียนฉือ + สวนหงซาน &amp; ช้อปของฝาก บินค่ำจาก URC</div>
+            </article>
+
+            <article class="day-card">
+              <div class="day-top">
+                <span class="day-num">Day 9</span>
+                <span class="day-date">อา. 2 ม.ค. 28</span>
+              </div>
+              <div class="day-route">ถึงสนามบินสุวรรณภูมิ (BKK)</div>
+              <div class="day-detail">เดินทางถึงไทยโดยสวัสดิภาพ มีเวลาพักผ่อนเก็บกระเป๋าวันอาทิตย์ก่อนเริ่มทำงานรับปีใหม่</div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Panel 4: 4 Cities Hotels + Attractions + Famous Food -->
+        <section class="panel panel-grow" aria-labelledby="cities-heading">
+          <div class="panel-head">
+            <h2 class="panel-title" id="cities-heading">🏡 ที่พักอ้างอิงจริง • 📍 ที่เที่ยวห้ามพลาด • 🍲 อาหารขึ้นชื่อ 4 โซน</h2>
+            <div class="city-tabs" role="tablist" aria-label="เลือกดูข้อมูลแต่ละเมือง">
+              <button type="button" class="city-tab active" role="tab" aria-selected="true" data-filter="all">ดูครบ 4 เมือง (16:9)</button>
+              <button type="button" class="city-tab" role="tab" aria-selected="false" data-filter="altay">1. อาเล่อไท่ &amp; ปู้เอ๋อร์จิน</button>
+              <button type="button" class="city-tab" role="tab" aria-selected="false" data-filter="kanas">2. คานาสือ</button>
+              <button type="button" class="city-tab" role="tab" aria-selected="false" data-filter="hemu">3. หมู่บ้านเหอมู่</button>
+              <button type="button" class="city-tab" role="tab" aria-selected="false" data-filter="urumqi">4. อุรุมชี</button>
+            </div>
+          </div>
+
+          <div class="cities-grid" id="citiesGrid">
+            <!-- City 1: Altay & Burqin -->
+            <article class="city-card" data-city="altay" tabindex="0" aria-label="อาเล่อไท่ และ ปู้เอ๋อร์จิน">
+              <div class="city-banner">
+                <span class="city-name">🏔️ อาเล่อไท่ &amp; ปู้เอ๋อร์จิน</span>
+                <span class="city-nights">3 คืน (คืน 1, 2, 6)</span>
+              </div>
+              <div class="city-body">
+                <div class="hotel-box">
+                  <span class="hotel-name">รร.โบลเดน (สวนฮวาหลิน อาเล่อไท่ซี)</span>
+                  <div class="hotel-rate">1,400 บ./ห้อง/คืน <span>(รวม 4,200 บ. = 2,100 บ./คน)</span></div>
+                </div>
+                <div class="spot-section">
+                  <span class="sec-label">📍 สถานที่ห้ามพลาด:</span>
+                  กระเช้าลานสกีเจียงจวินซาน (ชมแสงอาทิตย์ตกสีชมพู), ถนนสายหิมะอาเหอ (Ahe Highway), เมืองเทพนิยายสไตล์รัสเซียปู้เอ๋อร์จิน
+                </div>
+                <div class="food-box">
+                  <span class="sec-label">🍲 อาหารต้องลอง:</span>
+                  <strong>ปลาแม่น้ำน้ำเย็น (狗鱼)</strong> ย่าง/หม้อไฟที่ปู้เอ๋อร์จิน เนื้อแน่นหวานไร้คาว (คนไม่ทานวัว/แกะทานสบาย) &amp; หม้อไฟร้อนๆ เมืองอัลไต
+                </div>
+                <div class="city-extra">
+                  <strong>📌 พิกัด &amp; ทริคกรุ๊ป 14 คน:</strong> ตั้งอยู่โซนสวนฮวาหลิน Nuogaite Rd. ห่างสนามบินและลานสกีเพียง 15–25 นาที • <strong>ทริคสำคัญ:</strong> เช้า Day 3 ตอนเช็กเอาต์ขึ้นเขา ให้ฝากกระเป๋าเดินทางใบใหญ่ไว้ที่นี่ แล้วค่อยรับคืนตอนกลับมาพักคืนที่ 6 ช่วยให้รถ 4WD ทั้ง 4 คันนั่งโล่งสบายมาก
+                </div>
+              </div>
+            </article>
+
+            <!-- City 2: Kanas -->
+            <article class="city-card" data-city="kanas" tabindex="0" aria-label="อุทยานคานาสือ">
+              <div class="city-banner">
+                <span class="city-name">🌲 อุทยานคานาสือ</span>
+                <span class="city-nights">1 คืน (คืน 3)</span>
+              </div>
+              <div class="city-body">
+                <div class="hotel-box">
+                  <span class="hotel-name">NANXI (No. 52 หมู่บ้านเก่าคานาสือ)</span>
+                  <div class="hotel-rate">2,500 บ./ห้อง/คืน <span>(1,250 บ./คน • รีวิว 9.6/10)</span></div>
+                </div>
+                <div class="spot-section">
+                  <span class="sec-label">📍 สถานที่ห้ามพลาด:</span>
+                  ทะเลสาบคานาสือน้ำแข็งขาวโพลน, ชมหมอกเช้า &amp; เกล็ดน้ำค้างแข็ง 3 อ่าว (อ่าวเทพเทวดา • อ่าวพระจันทร์เสี้ยว • อ่าวมังกรหมอบ)
+                </div>
+                <div class="food-box">
+                  <span class="sec-label">🍲 อาหารต้องลอง:</span>
+                  <strong>ซุปเห็ดหอมภูเขา</strong>, <strong>ซี่โครงเนื้อตุ๋น</strong> และไก่ผัดเครื่องเทศร้อนๆ (ร้านอาหารในที่พัก NANXI ทำอร่อยถูกปากคนไทยมาก)
+                </div>
+                <div class="city-extra">
+                  <strong>📌 พิกัด &amp; ทริคกรุ๊ป 14 คน:</strong> อยู่ในหมู่บ้านเก่าแท้ๆ (Kanasilao Village No. 52) ห่างทะเลสาบแค่ป้ายเดียว มีระบบทำความร้อนใต้พื้น (Floor Heating) อุ่นสบาย • <strong>ข้อควรระวัง:</strong> โฮมสเตย์บูติกมีจำนวนห้องน้อย ต้องรีบกดจองพร้อมกัน 7 ห้อง (เช็กเตียง Twin/King ล่วงหน้า) ทันทีที่เปิดตารางเดือน ธ.ค.
+                </div>
+              </div>
+            </article>
+
+            <!-- City 3: Hemu -->
+            <article class="city-card" data-city="hemu" tabindex="0" aria-label="หมู่บ้านเหอมู่">
+              <div class="city-banner">
+                <span class="city-name">❄️ หมู่บ้านเหอมู่</span>
+                <span class="city-nights">2 คืน (คืน 4–5)</span>
+              </div>
+              <div class="city-body">
+                <div class="hotel-box">
+                  <span class="hotel-name">Batai Garden Boutique Retreat (No. 69)</span>
+                  <div class="hotel-rate">2,000 บ./ห้อง/คืน <span>(รวม 4,000 บ. = 2,000 บ./คน)</span></div>
+                </div>
+                <div class="spot-section">
+                  <span class="sec-label">📍 สถานที่ห้ามพลาด:</span>
+                  จุดชมวิวฮาเติงดูเห็ดหิมะ &amp; ควันไฟยามเช้า, สะพานไม้เหอมู่, บ้านไม้เปิดไฟ Blue Hour, กระเช้าจี๋เค่อผู่หลินสู่ยอดเขาหยุนเซียว (2,800 ม.)
+                </div>
+                <div class="food-box">
+                  <span class="sec-label">🍲 อาหารต้องลอง:</span>
+                  <strong>หม้อไฟดินเผาชาวถูหว่า (土火锅)</strong> ซดซุปเนื้อร้อนๆ คลายหนาวกลางหิมะ &amp; <strong>ชานมร้อนซินเจียง</strong> ในคาเฟ่บ้านไม้ซุง
+                </div>
+                <div class="city-extra">
+                  <strong>📌 พิกัด &amp; ทริคกรุ๊ป 14 คน:</strong> ซ่อนตัวในสวนป่าเบิร์ช หมู่บ้านเก่าเหอมู่ (No. 69) เดินเพียง 5 นาทีถึงสะพานไม้เหอมู่และทางขึ้นจุดชมวิวฮาเติงโดยไม่ต้องรอรถเวียน มีระบบทำความร้อนใต้พื้น • แนะนำทักแชต Trip.com ก่อนเข้าพัก 1–2 วันเพื่อให้ที่พักนำรถลากเลื่อนมารับกระเป๋ากลางหิมะ
+                </div>
+              </div>
+            </article>
+
+            <!-- City 4: Urumqi -->
+            <article class="city-card" data-city="urumqi" tabindex="0" aria-label="เมืองอุรุมชี">
+              <div class="city-banner">
+                <span class="city-name">🕌 เมืองอุรุมชี</span>
+                <span class="city-nights">1 คืน (คืน 7 สิ้นปี)</span>
+              </div>
+              <div class="city-body">
+                <div class="hotel-box">
+                  <span class="hotel-name">รร.บอร์แมน (ถนนโฮตันสาย 2 แกรนด์บาซาร์)</span>
+                  <div class="hotel-rate">1,000 บ./ห้อง/คืน <span>(500 บ./คน • กว้าง 32–35 ตร.ม.)</span></div>
+                </div>
+                <div class="spot-section">
+                  <span class="sec-label">📍 สถานที่ห้ามพลาด:</span>
+                  ทะเลสาบสวรรค์เทียนฉือ (UNESCO), ตลาดนานาชาติแกรนด์บาซาร์ (ต้าปาจา), ถนนสตรีทฟู้ดโฮตันสาย 2, สวน &amp; ตลาดของฝากหงซาน
+                </div>
+                <div class="food-box">
+                  <span class="sec-label">🍲 อาหารต้องลอง:</span>
+                  <strong>ต้าผานจีไก่จานยักษ์เส้นสด</strong> (ร้าน Xinjiang Diyi Pan), <strong>ข้าวหมกโปโล</strong> (ร้าน Alim), <strong>แกะย่างเสียบไม้</strong>, ไก่ยำพริกเสฉวน, ซาลาเปาอบเตาตันดูร์
+                </div>
+                <div class="city-extra">
+                  <strong>📌 พิกัด &amp; ทริคกรุ๊ป 14 คน:</strong> No. 55 Ali Rd. ติดย่านของกินถนนโฮตันสาย 2 ห่างแกรนด์บาซาร์ 3 กม. • <strong>ทริคห้องพัก:</strong> ตอนนอนเปิดฮีตเตอร์ให้วางผ้าขนหนูชุบน้ำหมาดๆ ใกล้หัวเตียงกันคอแห้ง และพกน้ำจิ้มแจ่ว/พริกน้ำปลาซองไปตัดเลี่ยนเครื่องเทศจะทานอร่อยขึ้นเท่าตัว!
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- COMPACT FOOTER NOTES -->
+    <footer class="board-footer">
+      <span class="footer-pill">🧤 เตรียมพร้อม -30°C: เสื้อขนเป็ดกันลม • รองเท้าบุขน + ตะปูกันลื่น (Ice Cleats) • แผ่นแปะความร้อนติดมือถือกันแบตดับ</span>
+      <span>🌶️ ทริคสายกิน: พกน้ำจิ้มแจ่ว/พริกน้ำปลาซองตัดเลี่ยน • แตะการ์ดแต่ละเมืองด้านบนเพื่อดูพิกัดและทริคเชิงลึก</span>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const tabs = Array.from(document.querySelectorAll('.city-tab'));
+      const cards = Array.from(document.querySelectorAll('.city-card'));
+      const grid = document.getElementById('citiesGrid');
+      let currentFilter = 'all';
+
+      function applyFilter(filterKey) {
+        currentFilter = filterKey;
+        tabs.forEach((tab) => {
+          const isMatch = tab.dataset.filter === filterKey;
+          tab.classList.toggle('active', isMatch);
+          tab.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+        });
+
+        if (filterKey === 'all') {
+          grid.classList.remove('single-mode');
+          cards.forEach((card) => card.classList.remove('hidden'));
+        } else {
+          grid.classList.add('single-mode');
+          cards.forEach((card) => {
+            card.classList.toggle('hidden', card.dataset.city !== filterKey);
+          });
+        }
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          applyFilter(tab.dataset.filter);
+        });
+      });
+
+      cards.forEach((card) => {
+        card.addEventListener('click', () => {
+          if (currentFilter === 'all') {
+            applyFilter(card.dataset.city);
+          } else {
+            applyFilter('all');
+          }
+        });
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            card.click();
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
